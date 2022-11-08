@@ -1,0 +1,389 @@
+/*
+Google Font
+font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@700;900&display=swap');
+/* 
+Base CSS
+*/
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.6;
+    background-image: url(img/back.jpg);
+    color: #03010b;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+a{
+    font-weight: 500;
+ }
+h1,
+h2,
+h3,
+h4{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.container{
+    padding: 0 10%;
+}
+a.theme-button{
+    text-decoration: none;
+    background-color: palevioletred;
+    color: white;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 30px;
+    padding: 16px 32px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+a.theme-button:hover{
+    background-color: green;
+    color: white;
+}
+a.theme-button-small{
+    text-decoration: none;
+    background-color: palevioletred;
+    color: white;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 30px;
+    padding: 16px 32px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+a.theme-button-small:hover{
+    background-color: green;
+    color: white;
+}
+.section-heading{
+    text-align: center;
+    margin-bottom: 25px;
+}
+.section-heading h3{
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.section-heading h2{
+    font-size: 16px;
+    text-transform: capitalize;
+    font-size: 36px;
+}
+/* 
+Header area
+*/
+.header-area{
+    padding: 10px 0;
+}
+.header-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+    text-align: left;
+    grid-template-areas: 
+    "h i m"
+    "h i c";
+}
+.logo{
+    grid-area: h;
+    text-decoration-line: none;
+}
+.image{
+    grid-area: i;
+    height: 250px;
+}
+.menu-icon{
+    background-color: #3a2b71;
+    padding: 10px;
+    display: none;
+}
+.menu-icon img{
+    height: 15px;
+}
+.main-menu{
+    grid-area: m;
+    text-align: right;
+}
+.main-menu a{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px;
+    margin-left: 2px;
+    display: inline-block;
+    transition: 0.4s;
+}
+.main-menu a:hover{
+    color: rgb(39, 139, 155);
+}
+.contact{
+    grid-area: c;
+    text-align: right;
+    color: black;
+    padding-top: 50px;
+}
+.contact h3{
+    font-size: 15px;
+}
+.image img{
+    height: 230px;
+    width: 400px;
+}
+.logo h1{
+    color:black;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.logo a{
+    text-decoration: none;
+}
+.logo p{
+    color: black;
+}
+/* 
+Hero area
+*/
+.hero-area{
+    padding: 10px 0;
+}
+.hero-content{
+    background-color: olive;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hero-image img{
+    height: 500px;
+}
+.hero-text h2{
+    font-size: 35px;
+}
+.hero-text h4{
+    color: rgb(116, 58, 58);
+}
+
+
+/* 
+About area
+*/
+.about-area{
+    padding: 10px 0 50px 0;
+}
+.about-content{
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    background-color: olive;
+}
+.about-image{
+    flex: 1;
+}
+.about-image img{
+    height: 500px;
+    width: 400px;
+}
+.about-text{
+    flex: 1;
+}
+.about-text h2{
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+/* 
+Service area
+*/
+.service-area{
+    padding: 5px 0;
+}
+.service-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.single-service{
+    background-color:olive;
+    padding: 30px;
+    text-align: center;
+}
+.single-service h3{
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+
+/* 
+Contact area CSS
+*/
+.contact-area{
+    padding: 10px 0;
+}
+.contact-content form{
+    background-color: olive;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+    padding: 15px;
+    grid-template-areas:
+    "f l"
+    "e p"
+    "m m"
+    "s s";
+}
+#first-name{
+    grid-area: f;
+}
+#last-name
+{
+    grid-area: l;
+}
+#email-address{
+    grid-area: e;
+}
+#phone-number{
+    grid-area: p;
+}
+#message{
+    grid-area: m;
+}
+#send-message{
+    grid-area: s;
+    /* background-color: olive; */
+    cursor: pointer;
+}
+.contact-content input{
+    font-size: 17px;
+    padding: 12px;
+    border: 1px solid #3a2b71;
+}
+.contact-content textarea{
+    font-size: 17px;
+    font-family: 'Open Sans', sans-serif;
+    padding: 12px;
+    border: 1px solid #3a2b71;
+}
+
+/* 
+Footer area CSS
+*/
+.footer-area{
+    padding: 25px 0;
+    text-align: center;
+    color: white;
+}
+.footer-area p{
+    background-color: olive;
+}
+
+@media only screen and (max-width: 991px){
+/*heder area*/
+.header-content{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 30px;
+        gap: 15px;
+        margin-bottom: 20px;
+        text-align: center;
+        grid-template-areas:
+        "n"
+        "m" 
+        "h"
+        "i"
+        "c";
+    }
+    .logo{
+        grid-area: h;
+        text-decoration-line: none;
+    }
+    .image{
+        grid-area: i;
+        width: 100%;
+    }
+    .menu-icon{
+        grid-area: n;
+        display: block;
+        justify-self: end;
+    }
+    .main-menu{
+        grid-area: m;
+        text-align: center;
+        display: none;
+    }
+    .main-menu.show-menu{
+        display: block;
+    }
+    .main-menu a{
+        display: block;
+        background-color: #3a2b71;
+        border: solid 1px white;
+    }
+    .contact{
+        grid-area: c;
+    }
+
+.image img{
+    width: 100%;
+}
+.contact{
+    text-align: center;
+}
+
+/*hero area*/
+.hero-content{
+    flex-direction: column;
+    text-align: center;
+}
+.hero-text{
+    margin-bottom: 20px;
+}
+.hero-image img{
+    width: 100%;
+}
+/*about area*/
+.about-content{
+    flex-direction: column;
+    text-align: center;
+}
+.about-image img{
+    width: 100%;
+}
+/*service area*/
+.service-content{
+    grid-template-columns: repeat(1,1fr);
+}
+}
+@media only screen and (max-width: 575px){
+   /*contact area*/
+    .section-heading h2{
+    font-size: 25px;
+        }
+    .hero-text h2{
+                font-size: 30px;
+            }
+    .contact-content form{
+                display: grid;
+                grid-template-areas: 
+                "f f"
+                "l l"
+                "e e"
+                "p p"
+                "m m"
+                "s s";
+            }
+
+}
